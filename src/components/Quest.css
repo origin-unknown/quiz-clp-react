@@ -1,0 +1,116 @@
+.Quest {
+	padding: 1.2rem;
+	background-color: #282c34;
+	color: white;
+	font-size: calc(10px + 2vmin);
+	min-height: calc(100vh - 2.4rem);
+}
+
+.Quest-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 10px;
+	row-gap: 15px;
+}
+
+.Quest-form button {
+	padding: 0.5rem;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	background-color: #eee;
+	font-size: 0.85em;
+	transition-property: color, background-color;
+	transition-duration: 200ms;
+	transition-timing-function: ease-out;
+}
+
+.Quest-form button:hover {
+	background-color: #dedede;
+}
+
+.Quest-form button:active {
+	background: linear-gradient(-45deg, #bbb, #ccc, #bbb, #fff);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.Quest-form button[disabled] {
+	color: #dedede;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.Question {
+	min-height: 12.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Hud {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	gap: .6rem;
+}
+
+
+.BtnRefresh {
+	padding: 0.5rem;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	background-color: #eee;
+	font-size: 0.85em;
+}
+
+.BtnRefresh:hover {
+	background-color: #dedede;
+}
+
+.Overlay {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.2rem;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
